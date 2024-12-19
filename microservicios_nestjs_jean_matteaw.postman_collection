@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "bff680e7-3cb5-42cb-bb4e-530a75e05849",
+		"name": "testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27709785"
+	},
+	"item": [
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"listOrder\": [\r\n        {\r\n            \"idProduct\": \"a2c0583c-8900-47f5-8b86-978ecb9b442b\",\r\n            \"countOrder\": 80\r\n        },\r\n        {\r\n            \"idProduct\": \"a2c0583c-8900-47f5-8b86-978ecb9b442b\",\r\n            \"countOrder\": 400\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/orders/createOrder",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"createOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllOrders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"listOrder\": [\r\n        {\r\n            \"idProduct\": \"a2c0583c-8900-47f5-8b86-978ecb9b442b\",\r\n            \"countOrder\": 80\r\n        },\r\n        {\r\n            \"idProduct\": \"a2c0583c-8900-47f5-8b86-978ecb9b442b\",\r\n            \"countOrder\": 400\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/orders/getAllOrders",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"getAllOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"listOrder\": [\r\n        {\r\n            \"idProduct\": \"a2c0583c-8900-47f5-8b86-978ecb9b442b\",\r\n            \"countOrder\": 80\r\n        },\r\n        {\r\n            \"idProduct\": \"a2c0583c-8900-47f5-8b86-978ecb9b442b\",\r\n            \"countOrder\": 400\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/orders/getOrderById/6796fa42-4422-4c1f-ac72-53437fc398c1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"getOrderById",
+								"6796fa42-4422-4c1f-ac72-53437fc398c1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"producto 1\",\r\n    \"stock\": 100,\r\n    \"price\": -12000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/products/createProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"products",
+								"createProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/products/getAllProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"products",
+								"getAllProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/products/getProductById/a2c0583c-8900-47f5-8b86-978ecb9b442b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"products",
+								"getProductById",
+								"a2c0583c-8900-47f5-8b86-978ecb9b442b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStockProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"a2c0583c-8900-47f5-8b86-978ecb9b442b\",\r\n    \"stock\": 500,\r\n    \"price\": \"12000.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/products/updateStockProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"products",
+								"updateStockProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

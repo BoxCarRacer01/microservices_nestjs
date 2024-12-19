@@ -1,0 +1,53 @@
+# Ignorar directorios node_modules en cualquier lugar
+node_modules/
+
+# Ignorar archivos de salida de compilación en cualquier lugar
+dist/
+build/
+
+# Ignorar logs y reportes
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Ignorar archivos específicos para cada subproyecto
+back_products/.env
+back_products/node_modules/
+back_products/dist/
+back_products/.env.*.local
+back_products/coverage/
+back_products/package-lock.json
+
+back_order/.env
+back_order/.env.*.local
+back_order/dist/
+back_order/coverage/
+back_order/node_modules/
+back_order/package-lock.json
+
+# Ignorar configuraciones específicas del editor
+.vscode/
+.idea/
+
+# Ignorar sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar lockfiles del gestor de paquetes
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignorar configuraciones temporales o de depuración
+*.tmp
+*.bak
+*.swp
+*.pid
+
+# Ignorar cobertura
+coverage/
+
+# Archivos generados por el CLI de NestJS
+nestjs-cli.json

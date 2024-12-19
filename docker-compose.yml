@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  order-service:
+    build:
+      context: ./back_order
+      dockerfile: Dockerfile
+    container_name: order-service
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    networks:
+      - app-network
+    environment:
+      - PRODUCTS_SERVICE_HOST=product-service
+      - PRODUCTS_SERVICE_PORT=3003
+      - DB_HOST=host.docker.internal
+
+  product-service:
+    build:
+      context: ./back_products
+      dockerfile: Dockerfile
+    container_name: product-service
+    ports:
+      - "3002:3002"
+      - "3003:3003"
+    networks:
+      - app-network
+    environment:
+      - ORDER_SERVICE_HOST=order-service
+      - ORDER_SERVICE_PORT=3001
+      - DB_HOST=host.docker.internal
+      
+networks:
+  app-network:
+    driver: bridge
